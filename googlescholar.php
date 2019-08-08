@@ -32,7 +32,7 @@ foreach($html->find("#gsc_a_t .gsc_a_tr") as $pub) {
 	$str .= "\n  {\n    \"title\": \"" . $pub->find(".gsc_a_at", 0)->plaintext;
 	$str .= "\",\n    \"authors\": \"" . $pub->find(".gs_gray", 0)->plaintext;
 	$str .= "\",\n    \"venue\": \"" .$pub->find(".gs_gray", 1)->plaintext;
-	if($pub->find(".gsc_a_ac", 0)->plaintext == "&nbsp;")
+	if(!is_numeric($pub->find(".gsc_a_ac", 0)->plaintext))
 		$str .= "\",\n    \"citations\": 0";
 	else
 		$str .= "\",\n    \"citations\": " . $pub->find(".gsc_a_ac", 0)->plaintext;
