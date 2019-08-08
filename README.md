@@ -3,7 +3,7 @@ GoogleScholar API
 
 Simple API that parses information from https://scholar.google.se/citations. 
 
-Outputs the publications on the first page together with the Citation indeces. Live sample can be found here: http://cse.bth.se/~fer/googlescholar.php?user=vJjq9LwAAAAJ do note that the `user=<google-scholar-id>` must be set. Do note that there is no verification of the input variable `user`, this makes it possible to append `%26view_op=list_works%26sortby=pubdate` after the `scholar-id` to get the publications sorted by year (newest first).
+Outputs the publications on the first page together with the Citation indeces. Live sample can be found here: http://cse.bth.se/~fer/googlescholar-api/googlescholar.php?user=vJjq9LwAAAAJ do note that the `user=<google-scholar-id>` must be set. Do note that there is no verification of the input variable `user`, this makes it possible to append `%26view_op=list_works%26sortby=pubdate` after the `scholar-id` to get the publications sorted by year (newest first).
 
 Sample output:
 
