@@ -1,12 +1,6 @@
 <?php
 
-#ini_set(default_charset, "utf-8");
-#header('Content-Type: application/json; charset=utf-8');
-header('Content-Type: application/json');
-
-function iconv($a, $b, $c) {
-	return $c;
-}
+header('Content-Type: application/json; charset=utf-8');
 
 if(!isset($_GET["user"]))
 	exit -1;
