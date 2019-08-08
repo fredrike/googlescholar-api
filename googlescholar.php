@@ -18,11 +18,11 @@ $html->load_file("http://scholar.google.se/citations?user=" . $_GET["user"]);
 
 print "{\n \"total_citations\": " . $html->find("#gsc_rsb_st td.gsc_rsb_std", 0)->plaintext . ",\n";
 
-$s = " \"citations_per_year\": {";
-$years = $html->find('#gsc_g_x .gsc_g_t');
-$scores = $html->find('#gsc_g_bars .gsc_g_al');
+$s = " \"citations_per_year\": { ";
+$years = $html->find('.gsc_g_t');
+$scores = $html->find('.gsc_g_al');
 foreach($scores as $key => $score) {
-	$s .= "\n  \"" . $years[$key]->plaintext ."\": ". $score->plaintext . ",";
+	$s .= "\n  \"" . trim($years[$key]->plaintext) ."\": ". trim($score->plaintext) . ",";
 }
 print substr($s, 0, -1) . "\n },\n";
 
