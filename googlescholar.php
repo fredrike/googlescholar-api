@@ -8,7 +8,7 @@ if(!isset($_GET["user"]))
 # create and load the HTML
 include('simple_html_dom.php');
 $html = new simple_html_dom();
-$html->load_file("http://scholar.google.se/citations?user=" . $_GET["user"]);
+$html->load_file("http://scholar.google.se/citations?cstart=1&pagesize=100&user=" . $_GET["user"]);
 
 print "{\n \"total_citations\": " . $html->find("#gsc_rsb_st td.gsc_rsb_std", 0)->plaintext . ",\n";
 
